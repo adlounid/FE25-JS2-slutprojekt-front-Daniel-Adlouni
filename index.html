@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrum Board</title>
+    <link rel="stylesheet" href="./src/style.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header>
+        <h1>Scrum Board</h1>
+    </header>
+
+    <div class="forms-container">
+        <section class="form-section">
+            <h3>Ny Medlem</h3>
+            <form id="member-form">
+                <input type="text" id="member-name" placeholder="Namn" required>
+                <select id="member-category">
+                    <option value="ux">UX</option>
+                    <option value="dev frontend">Dev Frontend</option>
+                    <option value="dev backend">Dev Backend</option>
+                </select>
+                <button type="submit">Spara Medlem</button>
+            </form>
+        </section>
+
+        <section class="form-section">
+            <h3>Ny Uppgift</h3>
+            <form id="task-form">
+                <input type="text" id="task-title" placeholder="Titel" required>
+                <input type="text" id="task-desc" placeholder="Beskrivning" required>
+                <select id="task-category">
+                    <option value="ux">UX</option>
+                    <option value="dev frontend">Dev Frontend</option>
+                    <option value="dev backend">Dev Backend</option>
+                </select>
+                <button type="submit">Skapa Uppgift</button>
+            </form>
+        </section>
+    </div>
+
+    <main class="board">
+        <section class="column">
+            <div class="column-header">
+                <h2>New</h2>
+                <span class="count" id="count-new">0</span>
+            </div>
+            <div id="status-new" class="task-container"></div>
+        </section>
+
+        <section class="column">
+            <div class="column-header">
+                <h2>Doing</h2>
+                <span class="count" id="count-doing">0</span>
+            </div>
+            <div id="status-doing" class="task-container"></div>
+        </section>
+
+        <section class="column">
+            <div class="column-header">
+                <h2>Done</h2>
+                <span class="count" id="count-done">0</span>
+            </div>
+            <div id="status-done" class="task-container"></div>
+        </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
