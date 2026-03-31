@@ -41,6 +41,16 @@ header h1 {
     padding: 0 1rem;
 }
 
+.global-message {
+    max-width: 1100px;
+    margin: 0 auto 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    background: #fee2e2;
+    color: #991b1b;
+    font-weight: 600;
+}
+
 .form-section {
     background: white;
     padding: 1.5rem;
@@ -88,6 +98,13 @@ button:hover {
     background: var(--primary-hover);
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+button:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
 }
 
 .board {
@@ -166,4 +183,12 @@ button:hover {
     font-size: 0.7rem;
     color: #94a3b8;
     font-style: italic;
+}
+
+.task-warning {
+    margin-top: 0.75rem;
+    margin-bottom: 0.25rem;
+    color: #b91c1c;
+    font-size: 0.85rem;
+    font-weight: 600;
 }
